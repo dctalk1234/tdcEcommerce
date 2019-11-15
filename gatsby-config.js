@@ -6,4 +6,8 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Gatsby E-Commerce Starter",
+  },
+  plugins: ["gatsby-plugin-stripe"],
 }
