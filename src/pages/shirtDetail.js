@@ -55,6 +55,7 @@ class shirtDetail extends React.Component {
         </Link>
         <img style={imageDetail} src={shirtImage} alt="hello" />
         <p>Description: </p>
+        <p>Price: 25$</p>
         <select onChange={this.handleSizeChange}>
           <option value="S">Small</option>
           <option value="M">Medium</option>

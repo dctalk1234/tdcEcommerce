@@ -36,6 +36,7 @@ class stickerDetail extends React.Component {
         </Link>
         <img style={imageDetail} src={stickerImage} alt="hello" />
         <p>High Quality vynal die cut stickers. Perfect for cars, waterbottles and laptops</p>
+        <p>Price: 25$</p>
         <input onChange={this.handlQuantityChange} type="number" min="1" placeholder='quantity'/>
         <Checkout id="sku_GBBkBsk99otFJj" quantity={this.state.quantity} />      
       </div>
