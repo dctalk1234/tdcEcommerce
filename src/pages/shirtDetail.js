@@ -6,10 +6,13 @@ import { Link } from "gatsby"
 
 const imageDetail = {
   maxWidth: "300px",
+  float: "left",
+  marginRight: '30px',
 }
 const links = {
-  textDecoration: 'none',
+  textDecoration: "none",
 }
+
 class shirtDetail extends React.Component {
   constructor(props) {
     super(props)
@@ -49,24 +52,33 @@ class shirtDetail extends React.Component {
 
   render() {
     return (
-      <div style={{ color: `teal` }}>
+      <div>
         <Link to="/" style={links}>
           <Header headerText="TDC Printed Shirt" />
         </Link>
-        <img style={imageDetail} src={shirtImage} alt="hello" />
-        <p>Description: </p>
-        <p>Price: 25$</p>
-        <select onChange={this.handleSizeChange}>
-          <option value="S">Small</option>
-          <option value="M">Medium</option>
-          <option selected value="L">
-            Large
-          </option>
-          <option value="XL">X-Large</option>
-        </select>
-        <input onChange={this.handlQuantityChange} type="number" min="1" placeholder='quantity' />
 
-        <Checkout id={this.state.size} quantity={this.state.quantity} />
+        <img style={imageDetail} src={shirtImage} alt="hello" />
+        <section>
+          <p>Description: </p>
+          <p>Price: 25$</p>
+          <p>
+            Size:{" "}
+            <select onChange={this.handleSizeChange}>
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option selected value="L">
+                Large
+              </option>
+              <option value="XL">X-Large</option>
+            </select>
+          </p>
+          <p>
+            Quantity:
+            <input onChange={this.handlQuantityChange} type="number" min="1" />
+          </p>
+
+          <Checkout id={this.state.size} quantity={this.state.quantity} />
+        </section>
       </div>
     )
   }

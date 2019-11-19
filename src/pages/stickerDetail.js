@@ -6,9 +6,12 @@ import { Link } from "gatsby"
 
 const imageDetail = {
   maxWidth: "300px",
+  float: "left",
+  marginRight: '30px',
 }
+
 const links = {
-  textDecoration: 'none',
+  textDecoration: "none",
 }
 class stickerDetail extends React.Component {
   constructor(props) {
@@ -16,7 +19,6 @@ class stickerDetail extends React.Component {
 
     this.state = {
       quantity: 0,
-   
     }
     this.handlQuantityChange = this.handlQuantityChange.bind(this)
   }
@@ -29,19 +31,26 @@ class stickerDetail extends React.Component {
 
   render() {
     return (
-      <div style={{ color: `teal` }}>
-        <Link to='/' style={links}>
-        <Header headerText="Sticker" />
-
+      <div>
+        <Link to="/" style={links}>
+          <Header headerText="TDC Bumper Sticker" />
         </Link>
         <img style={imageDetail} src={stickerImage} alt="hello" />
-        <p>High Quality vynal die cut stickers. Perfect for cars, waterbottles and laptops</p>
-        <p>Price: 25$</p>
-        <input onChange={this.handlQuantityChange} type="number" min="1" placeholder='quantity'/>
-        <Checkout id="sku_GBBkBsk99otFJj" quantity={this.state.quantity} />      
+        <section>
+          <p>
+            High Quality vynal die cut stickers. Perfect for cars, waterbottles
+            and laptops
+          </p>
+          <p>Price: 25$</p>
+          <p>
+            Quantity:{" "}
+            <input onChange={this.handlQuantityChange} type="number" min="1" />
+          </p>
+          <Checkout id="sku_GBBkBsk99otFJj" quantity={this.state.quantity} />
+        </section>
       </div>
     )
   }
 }
 
-export default stickerDetail;
+export default stickerDetail

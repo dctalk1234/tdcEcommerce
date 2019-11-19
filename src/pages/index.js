@@ -2,25 +2,26 @@ import React from "react"
 import { Link } from "gatsby"
 import shirtImage from "../images/image-20190508_131507_1.jpg"
 import stickerImage from "../images/P_20191114_171803_vHDR_Auto.jpg"
-import Checkout from "../components/checkout"
 import TDCLogo from "../images/TDC Logo (1).jpg"
 
 const navbar = {
-  display: 'block',
-  alignContent: 'space-between',
-  textAlign: 'center',
-  padding: '20px',
-  width: '100%',
-  backgroundColor: 'grey',
+  backgroundColor: "black",
+  textAlign: "center",
+  color: "grey",
 }
 
 const links = {
   margin: "0px 30px",
-  textDecoration: 'none',
+  textDecoration: "none",
+  fontSize: "30px",
 }
 
 const header = {
-  backgroundColor: 'black',
+  display: "block",
+  textAlign: "center",
+  padding: "20px",
+  backgroundColor: "grey",
+  marginBottom: "20px",
 }
 
 const cardStyles = {
@@ -30,7 +31,7 @@ const cardStyles = {
   backgroundColor: "#fff",
   borderRadius: "6px",
   width: "300px",
-  height: '400px',
+  height: "400px",
 }
 
 const sectionStyle = {
@@ -41,14 +42,23 @@ const sectionStyle = {
 }
 
 export default () => (
-  <div style={{ color: `purple` }}>
+  <div>
+    <nav style={navbar}>
+      <Link style={links} to="/">
+        Home
+      </Link>
+      <Link style={links} to="/contact/">
+        Contact
+      </Link>
+      <a
+        style={links}
+        href="https://www.youtube.com/channel/UCUM6B8HfH-OYoheFvjhDJuQ"
+      >
+        Youtube
+      </a>
+    </nav>
     <header style={header}>
-      <h1>TDC Store </h1>
-      <nav style={navbar}>
-        <Link style={links} to="/">Home</Link>
-        <Link style={links} to="/contact/">About</Link>
-        <a style={links} href='https://www.youtube.com/channel/UCUM6B8HfH-OYoheFvjhDJuQ'>Youtube</a>
-      </nav>
+      <h1>TDC Store</h1>
     </header>
 
     <section style={sectionStyle}>

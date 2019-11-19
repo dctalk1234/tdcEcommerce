@@ -9,5 +9,6 @@ module.exports = {
   siteMetadata: {
     title: "Gatsby E-Commerce Starter",
   },
-  plugins: ["gatsby-plugin-stripe"],
+  plugins: ["gatsby-plugin-stripe",
+  `gatsby-plugin-sass`]
 }
