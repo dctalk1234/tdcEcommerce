@@ -26,7 +26,7 @@ const Checkout = class extends React.Component {
     console.log("in redirect")
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ sku: this.props.id, quantity: parseInt(this.props.quantity) }],
-      successUrl: `https://thedeadcylinders.com/sucess`,
+      successUrl: `https://thedeadcylinders.com/success`,
       cancelUrl: `https://thedeadcylinders.com/`,
     })
     if (error) {
